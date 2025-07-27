@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('../config/db');
 const authRoutes = require('../routes/authRoutes');
+const userRoutes = require('../routes/userRoutes');
 
 dotenv.config(); // Load environment variables from .env file
 
@@ -15,6 +16,7 @@ app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
 
 //routes
 app.use('/api/auth', authRoutes); // Use authentication routes
+app.use('/api/users', userRoutes); // Use user routes
 app.get('/', (req, res) => {
   res.send('Hello, World!');
 });
