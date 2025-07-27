@@ -13,4 +13,4 @@ const connectDB = async () => {
   }
 }
 
-module.exports = connectDB; // Export the connection function for use in other files
+module.exports = connectDB; 
